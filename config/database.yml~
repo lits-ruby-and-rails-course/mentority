@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: postgres
+  password: fiarin11
+  database: mentor_db
+  schema_search_path: public
+  encoding: utf8
+  template: template1
+
+
