@@ -5,7 +5,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.integer :user_id, index: true, unique: true, foreign_key: true
       t.attachment  :avatar
       t.date    :birthday
-      t.text    :introduction
+      t.text    :personal_info
       t.string  :user_email
       t.string  :user_phone
       t.timestamps null: false

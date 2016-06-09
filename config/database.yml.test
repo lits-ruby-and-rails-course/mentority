@@ -8,5 +8,3 @@ development:
   schema_search_path: public
   encoding: utf8
   template: template1
-
-
