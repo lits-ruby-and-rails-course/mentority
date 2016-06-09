@@ -5,10 +5,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Custom CSS -->
+    <link href="http://blackrockdigital.github.io/startbootstrap-grayscale/css/grayscale.css" rel="stylesheet">
 </head>
 <body>
+<!--<%= render  'layouts/navigation'%>-->
 
 <%= yield %>
+<!-- Footer -->
+   <footer>
+       <div class="container text-center">
+           <p>Copyright &copy; Your Website 2014</p>
+       </div>
+   </footer>
 
 </body>
 </html>
