@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   root 'static#home'
+  get 'home' => 'static#home'
+ get 'contact'=>'static#contact'
+ get 'about'=>'static#about'
+
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
