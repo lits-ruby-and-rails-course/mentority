@@ -14,5 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery
-//= require bootstrap-sprockets
+
+//= require landing_page/jquery.js
+//= require landing_page/bootstrap.min.js
+//= require landing_page/custom.js
+//= require landing_page/jquery.sticky.js
+//= require landing_page/wow.min.js
+//= require landing_page/owl.carousel.min.js
