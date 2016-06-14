@@ -4,4 +4,8 @@ class StaticController < ApplicationController
   def home
     render layout: 'landing'
   end
+
+  def user_profile
+  	render layout: 'landing'
+  end
 end
