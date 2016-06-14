@@ -6,25 +6,9 @@
 <title>Backyard Landing Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<!-- CSS Files -->
-<!-- Colors -->
-
-<!-- <link href="css/css-index-green.css" rel="stylesheet" media="screen"> -->
-<!-- <link href="css/css-index-purple.css" rel="stylesheet" media="screen"> -->
-<!-- <link href="css/css-index-red.css" rel="stylesheet" media="screen"> -->
-<!-- <link href="css/css-index-orange.css" rel="stylesheet" media="screen"> -->
-<!-- <link href="css/css-index-yellow.css" rel="stylesheet" media="screen"> -->
-
-<!-- Google Fonts -->
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
-
 </head>
   
 <body data-spy="scroll" data-target="#navbar-scroll">
-
-<!-- /.preloader -->
-<div id="preloader"></div>
-<div id="top"></div>
 
 <!-- /.parallax full screen background image -->
 <div class="fullscreen landing parallax" style="background-image:url(assets/landing_page/laptop-wallpaper.jpg);" data-img-width="2000" data-img-height="1333" data-diff="100">
@@ -51,7 +35,7 @@
 					<!-- /.header button -->
 					<div class="head-btn wow fadeInLeft">
 						<a href="#feature" class="btn-primary">Features</a>
-						<a href="" class="btn-default">Sign In</a>
+						<%= link_to "Sign In", new_user_registration_path, :class => "btn-default" %>
 					</div>
 				</div> 
 				
@@ -120,8 +104,9 @@
 			
 			<!-- /.intro content -->
 			<div class="col-md-6 wow slideInRight">
-				<h2>Optimize performance through advanced targeting solutions</h2>
-				<p>Good marketing makes the company look smart. <a href="#">Great marketing</a> makes the customer feel smart, - Joe Chernov. Never doubt a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has, - Margaret Mead. The best way to predict the future is to create it, - Peter Drucker.
+				<h2>Optimizing your performance through studying fun!</h2>
+				<p>Mentority is unique training system.
+				Here every student can realize their potential. In the system, there are many interesting and useful courses. The best teachers teach our students.
 				</p>
 
 					<div class="btn-section"><a href="#feature" class="btn-default">Learn More</a></div>
@@ -139,7 +124,7 @@
 
 			<!-- /.feature title -->
 				<h2>Recreate your ideas and gain more success</h2>
-				<p>Increase your user loyalty by maintaining mutual communication and nurturing your online community.</p>
+				<p>Increase your knowledge by studying specially developed technique by key leading sectors.</p>
 			</div>
 		</div>
 		<div class="row row-feat">
@@ -155,38 +140,39 @@
 			
 				<!-- /.feature 1 -->
 				<div class="col-sm-6 feat-list">
-					<i class="pe-7s-notebook pe-5x pe-va wow fadeInUp"></i>
+					<i class="fa fa-group wow fadeInUp"></i>
 					<div class="inner">
-						<h4>Marketing Strategy</h4>
-						<p>Good marketing makes the company look smart. Great marketing makes the customer feel smart.
+						<h4>Self and group Education</h4>
+						<p>Find your mentor, course and team.
+						Did not find? Applying for special training and mentor necessarily respond you.
 						</p>
 					</div>
 				</div>
 			
 				<!-- /.feature 2 -->
 				<div class="col-sm-6 feat-list">
-					<i class="pe-7s-cash pe-5x pe-va wow fadeInUp" data-wow-delay="0.2s"></i>
+					<i class="fa fa-file-text-o wow fadeInUp" data-wow-delay="0.2s"></i>
 					<div class="inner">
-						<h4>App Monetization</h4>
-						<p>Content builds relationships. Relationships are built on trust. Trust drives revenue. - Andrew Davis</p>
+						<h4>Studying Plan</h4>
+						<p>Make a plan with a mentor. Agree payment details and check your skills. Getting to learn!</p>
 					</div>
 				</div>
 			
 				<!-- /.feature 3 -->
 				<div class="col-sm-6 feat-list">
-					<i class="pe-7s-cart pe-5x pe-va wow fadeInUp" data-wow-delay="0.4s"></i>
+					<i class="fa fa-line-chart wow fadeInUp" data-wow-delay="0.4s"></i>
 					<div class="inner">
-						<h4>Store Optimization</h4>
-						<p>Never doubt a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has.</p>
+						<h4>Fast Progressing</h4>
+						<p>Learn and progress quickly. This will allow you to learn more!</p>
 					</div>
 				</div>
 			
 				<!-- /.feature 4 -->
 				<div class="col-sm-6 feat-list">
-					<i class="pe-7s-users pe-5x pe-va wow fadeInUp" data-wow-delay="0.6s"></i>
+					<i class="fa fa-graduation-cap wow fadeInUp" data-wow-delay="0.6s"></i>
 					<div class="inner">
-						<h4>User Management</h4>
-						<p>Instead of using technology to automate processes, think about using technology to enhance human interaction.</p>
+						<h4>Certified Knowledge</h4>
+						<p>At the end of the course get a Certificate signed by your mentor.</p>
 					</div>
 				</div>
 			</div>
@@ -240,14 +226,13 @@
 					<div class="col-sm-5 contact-left wow fadeInUp">
 						<h2><span class="highlight">Get</span> in touch</h2>
 							<ul class="ul-address">
-							<li><i class="pe-7s-map-marker"></i>1600 Amphitheatre Parkway, Mountain View</br>
-							California 55000
+							<li><i class="pe-7s-map-marker"></i>Stryiska, 33</br>
+							L'viv 79000
 							</li>
-							<li><i class="pe-7s-phone"></i>+1 (123) 456-7890</br>
-							+2 (123) 456-7890
+							<li><i class="pe-7s-phone"></i>+380 67 675 24 50</br>
 							</li>
-							<li><i class="pe-7s-mail"></i><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li><i class="pe-7s-look"></i><a href="#">www.yoursite.com</a></li>
+							<li><i class="pe-7s-mail"></i><a href="mailto:info@yoursite.com">info@lits.com.ua</a></li>
+							<li><i class="pe-7s-look"></i><a href="#">www.lits.com.ua</a></li>
 							</ul>	
 								
 					</div>
@@ -282,13 +267,11 @@
 			<!-- /.social links -->
 				<div class="social text-center">
 					<ul>
-						<li><a class="wow fadeInUp" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						<li><a class="wow fadeInUp" href="https://twitter.com/"><i class="fa fa-github-alt"></i></a></li>
 						<li><a class="wow fadeInUp" href="https://www.facebook.com/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
-						<li><a class="wow fadeInUp" href="https://plus.google.com/" data-wow-delay="0.4s"><i class="fa fa-google-plus"></i></a></li>
-						<li><a class="wow fadeInUp" href="https://instagram.com/" data-wow-delay="0.6s"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 				</div>	
-			<a href="#" class="scrollToTop"><i class="pe-7s-up-arrow pe-va"></i></a>
+			<a href="#" class="scrollToTop"><i class="fa fa-angle-double-up"></i></a>
 		</div>	
 	</div>	
 </footer>
