@@ -10,17 +10,16 @@
                 <div class="col-md-8 col-md-offset-2">
                   <h1>List of Courses</h1>
 
-                  <table>
+                  <table class="table">
                     <tr>
-                      <th>Title</th>
+                      <th scope="row">Title</th>
                       <th>Summary</th>
-                      <th></th>
-                      <th></th>
                       <th></th>
                     </tr>
 
                   <% @courses.each do |course| %>
                     <tr>
+                      <th scope="row"></th>
                       <td><%= course.title %></td>
                       <td><%= course.description %></td>
                        <td><%= link_to "Show", course %></td>
