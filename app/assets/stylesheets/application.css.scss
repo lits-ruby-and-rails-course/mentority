@@ -15,3 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+input, select, textarea{
+    color: #ff0000;
+}
