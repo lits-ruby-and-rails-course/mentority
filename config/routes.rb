@@ -9,6 +9,7 @@ Rails.application.routes.draw do
    #Added because of big pictures not loading at the landing page instead.
    get 'pages/index' => 'pages#index'
 
+   resources :courses
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,22 @@
+<header class="intro">
+  <div class="intro-body">    		
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <p >
+            <strong>Title:</strong>
+            <%= @course.title %>
+          </p>
+
+          <p>
+            <strong>Description:</strong>
+            <%= @course.description %>
+          </p>
+        </div>
+
+      </div>
+              <%= link_to 'Back', courses_path %>
+
+    </div>
+  </div>
+</header>
