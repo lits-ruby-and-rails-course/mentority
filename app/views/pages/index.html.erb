@@ -2,12 +2,12 @@
 
 <!-- /.parallax full screen background image -->
 <div class="fullscreen landing parallax" style="background-image:url(assets/landing_page/laptop-wallpaper.jpg);" data-img-width="2000" data-img-height="1333" data-diff="100">
-	
+
 	<div class="overlay">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
-				
+
 					<!-- /.logo -->
 					<div class="logo wow fadeInDown"> <a href=""><%= image_tag("landing_page/mentority_white.png") %></a></div>
 
@@ -20,42 +20,40 @@
 					<div class="landing-text wow fadeInUp">
 						<p>A once-in-a-lifetime opportunity to be an IT-Specialist.<br>
 						Created by LITS.</p>
-					</div>				  
+					</div>
 
 					<!-- /.header button -->
 					<div class="head-btn wow fadeInLeft">
 						<a href="#feature" class="btn-primary">Features</a>
-						<%= link_to "Sign In", new_user_registration_path, :class => "btn-default" %>
+						<%= link_to "Sign Up", new_user_registration_path, :class => "btn-default" %>
 					</div>
-				</div> 
-				
+				</div>
+
 				<!-- /.signup form -->
 				<div class="col-md-5">
-				
+
 					<div class="signup-header wow fadeInUp">
 						<h3 class="form-title text-center">GET STARTED</h3>
-						<form class="form-header" action="http://moxdesign.us10.list-manage.com/subscribe/post" role="form" method="POST" id="#">
-						<input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-						<input type="hidden" name="id" value="bfdba52708">
+						<%= form_for(User.new, as: 'user', url: user_session_path, html: { class: 'form-header', method: :post }) do |f| %>
 							<div class="form-group">
-								<input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="Email address" required>
+								<%= f.email_field :email, autofocus: true, class: 'form-control input-lg', placeholder: 'Email address', required: true %>
 							</div>
 							<div class="form-group">
-								<input class="form-control input-lg" name="MERGE1" id="name" type="password" placeholder="Password" required>
+								<%= f.password_field :password, autocomplete: "off" , class: 'form-control input-lg' , required: true %>
 							</div>
 							<div class="form-group last">
-								<input type="submit" class="btn btn-warning btn-block btn-lg" value="LOGIN">
+								<%= f.submit "Login", class: 'btn btn-warning btn-block btn-lg' %>
 							</div>
 							<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>
-						</form>
-					</div>				
-				
+						<% end %>
+					</div>
+
 				</div>
 			</div>
-		</div> 
-	</div> 
+		</div>
+	</div>
 </div>
- 
+
 <!-- NAVIGATION -->
 <div id="menu">
 	<nav class="navbar-wrapper navbar-default" role="navigation">
@@ -69,7 +67,7 @@
 				</button>
 				<a class="navbar-brand site-name" href="#top"><%= image_tag("landing_page/mentority.png") %></a>
 			  </div>
-	 
+
 			  <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
 				<ul class="nav navbar-nav">
 					<li><a href="#intro">About</a></li>
@@ -90,8 +88,8 @@
 		<!-- /.intro image -->
 			<div class="col-md-6 intro-pic wow slideInLeft">
 				<%= image_tag("landing_page/logo_big.png", class:"img-responsive") %>
-			</div>	
-			
+			</div>
+
 			<!-- /.intro content -->
 			<div class="col-md-6 wow slideInRight">
 				<h2>Optimizing your performance through studying fun!</h2>
@@ -100,9 +98,9 @@
 				</p>
 
 					<div class="btn-section"><a href="#feature" class="btn-default">Learn More</a></div>
-		
+
 			</div>
-		</div>			  
+		</div>
 	</div>
 </div>
 
@@ -119,15 +117,15 @@
 		</div>
 		<div class="row row-feat">
 			<div class="col-md-4 text-center">
-			
+
 			<!-- /.feature image -->
 				<div class="feature-img">
 					<%= image_tag("landing_page/business-wallpaper.jpg", class:"img-responsive wow fadeInLeft") %>
 				</div>
 			</div>
-		
+
 			<div class="col-md-8">
-			
+
 				<!-- /.feature 1 -->
 				<div class="col-sm-6 feat-list">
 					<i class="fa fa-group wow fadeInUp"></i>
@@ -138,7 +136,7 @@
 						</p>
 					</div>
 				</div>
-			
+
 				<!-- /.feature 2 -->
 				<div class="col-sm-6 feat-list">
 					<i class="fa fa-file-text-o wow fadeInUp" data-wow-delay="0.2s"></i>
@@ -147,7 +145,7 @@
 						<p>Make a plan with a mentor. Agree payment details and check your skills. Getting to learn!</p>
 					</div>
 				</div>
-			
+
 				<!-- /.feature 3 -->
 				<div class="col-sm-6 feat-list">
 					<i class="fa fa-line-chart wow fadeInUp" data-wow-delay="0.4s"></i>
@@ -156,7 +154,7 @@
 						<p>Learn and progress quickly. This will allow you to learn more!</p>
 					</div>
 				</div>
-			
+
 				<!-- /.feature 4 -->
 				<div class="col-sm-6 feat-list">
 					<i class="fa fa-graduation-cap wow fadeInUp" data-wow-delay="0.6s"></i>
@@ -174,7 +172,7 @@
 <div id="feature-2">
 	<div class="container">
 		<div class="row">
-	
+
 			<!-- /.feature content -->
 			<div class="col-md-6 wow fadeInLeft">
 				<h2>Developed by:</h2>
@@ -187,7 +185,7 @@
 					<li>Darii Yar</li>
 					<li>Alex Procenko</li>
 				</ul>
-				
+
 				<ul class="col-md-6" >
 					<h5>Mentors:</h5>
 					<li>Andrew Yasinishyn</li>
@@ -195,13 +193,13 @@
 					<li>Arsen Slyusarchuk</li>
 				</ul>
 			</div>
-			  
+
 			<!-- /.feature image -->
 			<div class="col-md-6 feature-2-pic wow fadeInRight">
 				<%= image_tag("landing_page/lits-logo.png", class:"img-responsive") %>
-			</div>				  
-		</div>			  
-  
+			</div>
+		</div>
+
 	</div>
 </div>
 
@@ -211,7 +209,7 @@
 		<div class="overlay">
 			<div class="container">
 				<div class="row contact-row">
-				
+
 					<!-- /.address and contact -->
 					<div class="col-sm-5 contact-left wow fadeInUp">
 						<h2><span class="highlight">Get</span> in touch</h2>
@@ -223,10 +221,10 @@
 							</li>
 							<li><i class="pe-7s-mail"></i><a href="mailto:info@yoursite.com">info@lits.com.ua</a></li>
 							<li><i class="pe-7s-look"></i><a href="#">www.lits.com.ua</a></li>
-							</ul>	
-								
+							</ul>
+
 					</div>
-					
+
 					<!-- /.contact form -->
 					<div class="col-sm-7 contact-right">
 						<form method="POST" id="contact-form" class="form-horizontal" action="contactengine.php" onSubmit="alert('Thank you for your feedback!');">
@@ -235,21 +233,21 @@
 							</div>
 							<div class="form-group">
 							<input type="text" name="Email" id="Email" class="form-control wow fadeInUp" placeholder="Email" required/>
-							</div>					
+							</div>
 							<div class="form-group">
 							<textarea name="Message" rows="20" cols="20" id="Message" class="form-control input-message wow fadeInUp"  placeholder="Message" required></textarea>
 							</div>
 							<div class="form-group">
 							<input type="submit" name="submit" value="Submit" class="btn btn-success wow fadeInUp" />
 							</div>
-						</form>		
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-  
+
 <!-- /.footer -->
 <footer id="footer">
 	<div class="container">
@@ -260,14 +258,14 @@
 						<li><a class="wow fadeInUp" href="https://twitter.com/"><i class="fa fa-github-alt"></i></a></li>
 						<li><a class="wow fadeInUp" href="https://www.facebook.com/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
 					</ul>
-				</div>	
+				</div>
 			<a href="#" class="scrollToTop"><i class="fa fa-angle-double-up"></i></a>
-		</div>	
-	</div>	
+		</div>
+	</div>
 </footer>
-	
+
 	<!-- /.javascript files -->
-    
+
 	<script>
 		new WOW().init();
 	</script>
