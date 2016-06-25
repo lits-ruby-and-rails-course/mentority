@@ -14,8 +14,13 @@
 
 			  <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Log In</a></li>
-					<li><a href="#">Log Out</a></li>
+
+					<% if current_user %>
+						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </li>
+					<% end %>
+
+
+
 				</ul>
 			  </div>
 		</div>

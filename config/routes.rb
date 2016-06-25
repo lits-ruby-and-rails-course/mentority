@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   devise_for :users
+   devise_for :users, controllers: { registrations: "registrations" }
+
    root 'pages#index'
 
    #Added because of big pictures not loading at the landing page instead.
    get 'pages/index' => 'pages#index'
 
+   resources :courses
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
