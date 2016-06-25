@@ -8,26 +8,23 @@ class ApplicationController < ActionController::Base
      redirect_to root_path unless current_user.admin?
   end
 
+  protected
   def configure_permitted_parameters
      devise_parameter_sanitizer.for(:sign_up) do |u|
        u.permit([
-         :name,
+         :first_name,
+         :last_name,
          :email,
          :role,
-         :terms,
          :password,
          :password_confirmation,
-         profile_attributes: [:phone, :city, :car_phone, :role, :car_id]
+         profile_attributes: [:user_phone, :user_email, :birthday, :introduction]
          ])
        end
        devise_parameter_sanitizer.for(:sign_in) do |u|
-       u.permit(:login, :name, :email, :password, :remember_me)
+       u.permit(:first_name,:last_name,:email,:password,:remember_me)
      end
    end
  end
 
- protected
- def configure_permitted_parameters
-   devise_parameter_sanitizer.for(:sign_up) << :role
- end
 end
