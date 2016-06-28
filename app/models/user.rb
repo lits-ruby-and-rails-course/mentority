@@ -18,6 +18,7 @@
 #  role                   :integer
 #  first_name             :string
 #  last_name              :string
+#  banned                 :boolean          default(FALSE), not null
 #
 
 class User < ActiveRecord::Base
@@ -26,4 +27,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   enum role: { student: 0, mentor: 1, admin: 2 }
+  has_one :profile, dependent: :destroy
+  accepts_nested_attributes_for :profile, allow_destroy: true
+
 end

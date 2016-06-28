@@ -18,6 +18,7 @@
 #  role                   :integer
 #  first_name             :string
 #  last_name              :string
+#  banned                 :boolean          default(FALSE), not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
