@@ -27,7 +27,22 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   enum role: { student: 0, mentor: 1, admin: 2 }
+
   has_one :profile, dependent: :destroy
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :role, presence: true
+  validates_associated :profile
+
   accepts_nested_attributes_for :profile, allow_destroy: true
+
+  def active_for_authentication?
+    super && !self.banned
+  end
+
+  def inactive_message
+   self.banned ? :banned : super
+  end
 
 end
