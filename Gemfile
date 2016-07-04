@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
-
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-
 gem 'paperclip', '~> 4.1'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -27,7 +24,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "rails-erd"
 gem 'bootstrap_form'
-
+gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'annotate'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
