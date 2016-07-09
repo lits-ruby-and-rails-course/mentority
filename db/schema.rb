@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 20160627120240) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
+  create_table "cars", force: :cascade do |t|
+    t.integer "year"
+    t.string  "brand"
+    t.string  "model"
+  end
+
+  add_index "cars", ["year", "brand", "model"], name: "index_cars_on_year_and_brand_and_model", unique: true, using: :btree
+
   create_table "courses", force: :cascade do |t|
     t.text     "title"
     t.text     "description"
@@ -40,6 +48,14 @@ ActiveRecord::Schema.define(version: 20160627120240) do
   end
 
   add_index "courses", ["user_id"], name: "index_courses_on_user_id", using: :btree
+
+  create_table "helps", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+  end
 
   create_table "learnings", force: :cascade do |t|
     t.integer  "user_id"
@@ -51,6 +67,34 @@ ActiveRecord::Schema.define(version: 20160627120240) do
 
   add_index "learnings", ["course_id"], name: "index_learnings_on_course_id", using: :btree
   add_index "learnings", ["user_id"], name: "index_learnings_on_user_id", using: :btree
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "from_id"
+    t.integer  "to_id"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "rider_id"
+    t.integer  "driver_id"
+    t.string   "location_to"
+    t.string   "location_from"
+    t.integer  "status",        default: 0
+    t.float    "price"
+    t.text     "description"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "pessengers"
+    t.decimal  "mfrom_lat"
+    t.decimal  "mfrom_lng"
+    t.decimal  "mto_lat"
+    t.decimal  "mto_lng"
+  end
+
+  add_index "orders", ["driver_id"], name: "index_orders_on_driver_id", using: :btree
+  add_index "orders", ["rider_id"], name: "index_orders_on_rider_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -67,6 +111,21 @@ ActiveRecord::Schema.define(version: 20160627120240) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "rider_id"
+    t.integer  "driver_id"
+    t.integer  "stars"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "owner"
+    t.integer  "order_id"
+  end
+
+  add_index "reviews", ["driver_id"], name: "index_reviews_on_driver_id", using: :btree
+  add_index "reviews", ["order_id"], name: "index_reviews_on_order_id", using: :btree
+  add_index "reviews", ["rider_id"], name: "index_reviews_on_rider_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
