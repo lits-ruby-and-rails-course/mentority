@@ -1,0 +1,32 @@
+<div class="col-md-6 col-md-push-3">
+
+	<h3>Profile settings</h3>
+	<div class="col-md-12">
+
+		<div class="field">
+			<p><b>First name: <%= current_user.first_name %></b></p>
+		</div>
+
+		<div class="field">
+		<p><b>Last name: <%= current_user.last_name %></b></p>
+		</div>
+
+		<div class="field">
+			<p><b>Email: <%= current_user.email %></b></p>
+		</div>
+
+		<div class="field">
+			<p><b>Birthday: <%= current_user.profile.birthday %></b></p>
+		</div>
+
+		<div class="field">
+			<p><b>Phone: <%= current_user.profile.user_phone %></b></p>
+		</div>
+
+		<div class="field">
+			<p><b>My information: <%= current_user.profile.introduction %></b></p>
+		</div>
+
+		<%= link_to 'Edit pofile', edit_user_registration_path %>
+	</div>
+</div>

@@ -1,33 +1,51 @@
-<h2>Sign up</h2>
+<div class="col-md-6 col-md-push-3">
+  <%= provide(:title, "Sign Up") %>
+  <center><h1 >Sign Up</h1></center>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <%= form_for(resource, as: resource_name, url: user_registration_path) do |f| %>
+  <div id="error_explanation" class="col-md-12">
+    <%= devise_error_messages! %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="col-md-12">
+
+    <div class="field">
+      <%= f.text_field :first_name, autofocus: true, placeholder: "First Name", :class => "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :last_name, placeholder: "Last Name", :class => "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, placeholder: "Email", :class => "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password", :class => "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", :class => "form-control" %>
+    </div>
+
+    <div class="field">    
+      <%= form_for :profile do |profile_form| %>
+      <p><%= profile_form.text_field :introduction, placeholder: "About yourself" %></p>
+      <p><%= profile_form.date_select :birthday %></p>
+      <% end %>
+    </div>
+
+    <%= f.select :role, options_for_select(['student','mentor'].map{ |c| [c, c] }) %>
+
+    <div class="actions shared_links">
+      <%= f.submit "Sign up", class: "btn btn-large btn-primary" %>
+    </div>
+
+    <div>
+      <%= render "devise/shared/links" %>
+    </div>
+
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <%= f.select :role, options_for_select(['student','mentor'].map{ |c| [c, c] }) %>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-
-
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <% end %>  
+</div>
