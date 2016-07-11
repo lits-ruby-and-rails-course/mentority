@@ -16,6 +16,4 @@ class Learning < ActiveRecord::Base
 
 	enum status: [:active, :pending, :progress, :done, :archived]
 
-	validates :status, presence: true
-
 end

@@ -1,16 +1,17 @@
-<header class="intro">
-      <div class="intro-body">
-			<div class="container">
-              <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-            <%= bootstrap_form_for(@course) do |f| %>
-  					<%= f.text_field :title %>
-  					<%= f.text_area :description %>
-  					<%= f.submit "add course" %>
-            <%= link_to 'Back', courses_path %>
-					<% end %>
-					</div>
-              </div>
-          </div>
-      </div>
-  </header>
+                                    
+  <%= form_for @course do |f| %>
+<p>                  
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+<p>
+<%= f.label :description %>
+ 
+<textarea class="form-control" rows="10">
+  <%= f.text_area :description %>
+</textarea>
+
+  <%= f.submit "add course" %>
+
+  <%= link_to 'Back', courses_path %>
+
+  <% end %>
