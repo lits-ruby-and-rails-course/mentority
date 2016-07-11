@@ -12,6 +12,9 @@ Rails.application.routes.draw do
    get 'pages/index' => 'pages#index'
 
    resources :courses
+
+   post 'learning/apply' => 'learning#apply'
+   get 'learning/show' => 'learning#show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
