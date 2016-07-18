@@ -1,15 +1,13 @@
 class CoursesController<ApplicationController
 
 def index
-  @courses=Course.all
-    render layout: 'application'
+  @courses = Course.all
 end
 
 def create
 	@course = Course.new(course_params)
-	
 	@course.save
-  	redirect_to @course
+  redirect_to @course
 end
 
 def new
@@ -27,21 +25,19 @@ end
 
 def update
 	@course = Course.find(params[:id])
- 
-    if @course.update(course_params)
-      redirect_to @course
-    else
-      render 'edit'
-    end
+
+  if @course.update(course_params)
+    redirect_to @course
+  else
+    render 'edit'
+  end
 end
 
 def destroy
 	@course = Course.find(params[:id])
-    @course.destroy
- 
-    redirect_to courses_path
+  @course.destroy
+  redirect_to courses_path
 end
-
 
 private
 
