@@ -29,7 +29,6 @@ class User < ActiveRecord::Base
   enum role: { student: 0, mentor: 1, admin: 2 }
 
   has_one :profile, dependent: :destroy
-  after_create :build_profile
 
   validates :first_name, presence: true
   validates :last_name, presence: true
