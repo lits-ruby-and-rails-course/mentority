@@ -13,8 +13,7 @@ Rails.application.routes.draw do
 
    resources :courses
 
-   post 'learning/apply' => 'learning#apply'
-   get 'learning/show' => 'learning#show'
+   post 'learnings/apply' => 'learnings#apply'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
