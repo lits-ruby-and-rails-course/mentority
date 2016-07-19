@@ -7,14 +7,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
-
+					
 					<!-- /.logo -->
 					<div class="logo wow fadeInDown"> <a href=""><%= image_tag("landing_page/mentority_white.png") %></a></div>
 
 					<!-- /.main title -->
-						<h1 class="wow fadeInLeft">
-							Makes learning easy!
-						</h1>
+					<h1 class="wow fadeInLeft">
+						Makes learning easy!
+					</h1>
 
 					<!-- /.header paragraph -->
 					<div class="landing-text wow fadeInUp">
@@ -31,7 +31,6 @@
 
 				<!-- /.signup form -->
 				<div class="col-md-5">
-
 					<div class="signup-header wow fadeInUp">
 						<h3 class="form-title text-center">GET STARTED</h3>
 						<%= form_for(User.new, as: 'user', url: user_session_path, html: { class: 'form-header', method: :post }) do |f| %>
@@ -47,7 +46,6 @@
 							<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>
 						<% end %>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -65,16 +63,16 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand site-name" href="#top"><%= image_tag("landing_page/mentority.png") %></a>
+					<a class="navbar-brand site-name" href="#top"><%= image_tag("landing_page/mentority.png") %></a>
 			  </div>
 
 			  <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
-				<ul class="nav navbar-nav">
-					<li><a href="#intro">About</a></li>
-					<li><a href="#feature">Features</a></li>
-					<li><a href="#feature-2">Developed by</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="#intro">About</a></li>
+						<li><a href="#feature">Features</a></li>
+						<li><a href="#feature-2">Developed by</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
 			  </div>
 		</div>
 	</nav>
@@ -93,12 +91,13 @@
 			<!-- /.intro content -->
 			<div class="col-md-6 wow slideInRight">
 				<h2>Optimizing your performance through studying fun!</h2>
-				<p>Mentority is unique training system.
-				Here every student can realize their potential. In the system, there are many interesting and useful courses. The best teachers teach our students.
+				<p>
+					Mentority is unique training system.
+					Here every student can realize their potential. In the system,
+					there are many interesting and useful courses.
+					The best teachers teach our students.
 				</p>
-
 					<div class="btn-section"><a href="#feature" class="btn-default">Learn More</a></div>
-
 			</div>
 		</div>
 	</div>
@@ -112,7 +111,10 @@
 
 			<!-- /.feature title -->
 				<h2>Recreate your ideas and gain more success</h2>
-				<p>Increase your knowledge by studying specially developed technique by key leading sectors.</p>
+				<p>
+					Increase your knowledge by studying specially developed technique by
+					key leading sectors.
+				</p>
 			</div>
 		</div>
 		<div class="row row-feat">
@@ -131,8 +133,10 @@
 					<i class="fa fa-group wow fadeInUp"></i>
 					<div class="inner">
 						<h4>Self and group Education</h4>
-						<p>Find your mentor, course and team.
-						Did not find? Applying for special training and mentor necessarily respond you.
+						<p>
+							Find your mentor, course and team.
+							Did not find? Applying for special training and mentor necessarily
+							respond you.
 						</p>
 					</div>
 				</div>
@@ -142,7 +146,10 @@
 					<i class="fa fa-file-text-o wow fadeInUp" data-wow-delay="0.2s"></i>
 					<div class="inner">
 						<h4>Studying Plan</h4>
-						<p>Make a plan with a mentor. Agree payment details and check your skills. Getting to learn!</p>
+						<p>
+							Make a plan with a mentor. Agree payment details and
+							check your skills. Getting to learn!
+						</p>
 					</div>
 				</div>
 
@@ -172,7 +179,6 @@
 <div id="feature-2">
 	<div class="container">
 		<div class="row">
-
 			<!-- /.feature content -->
 			<div class="col-md-6 wow fadeInLeft">
 				<h2>Developed by:</h2>
@@ -199,7 +205,6 @@
 				<%= image_tag("landing_page/lits-logo.png", class:"img-responsive") %>
 			</div>
 		</div>
-
 	</div>
 </div>
 
@@ -214,15 +219,16 @@
 					<div class="col-sm-5 contact-left wow fadeInUp">
 						<h2><span class="highlight">Get</span> in touch</h2>
 							<ul class="ul-address">
-							<li><i class="pe-7s-map-marker"></i>Stryiska, 33</br>
-							L'viv 79000
-							</li>
-							<li><i class="pe-7s-phone"></i>+380 67 675 24 50</br>
-							</li>
-							<li><i class="pe-7s-mail"></i><a href="mailto:info@yoursite.com">info@lits.com.ua</a></li>
-							<li><i class="pe-7s-look"></i><a href="#">www.lits.com.ua</a></li>
+								<li>
+									<i class="pe-7s-map-marker"></i>Stryiska, 33</br>
+									L'viv 79000
+								</li>
+								<li>
+									<i class="pe-7s-phone"></i>+380 67 675 24 50</br>
+								</li>
+								<li><i class="pe-7s-mail"></i><a href="mailto:info@yoursite.com">info@lits.com.ua</a></li>
+								<li><i class="pe-7s-look"></i><a href="#">www.lits.com.ua</a></li>
 							</ul>
-
 					</div>
 
 					<!-- /.contact form -->
@@ -265,7 +271,6 @@
 </footer>
 
 	<!-- /.javascript files -->
-
 	<script>
 		new WOW().init();
 	</script>
