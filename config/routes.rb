@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'pages/index' => 'pages#index'
   get 'profile' => 'profiles#show'
   get 'edit' => 'profiles#edit'
+  get 'pages/home' => 'pages#home', as: :home 
 end
