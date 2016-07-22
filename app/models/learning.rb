@@ -16,5 +16,5 @@ class Learning < ActiveRecord::Base
 
   enum status: [:active, :pending, :progress, :done, :archived]
 
-  validates_uniqueness_of :user_id, :course_id 
+  validates_uniqueness_of :user_id, scope: :course_id 
 end
