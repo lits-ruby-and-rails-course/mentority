@@ -22,11 +22,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem "rails-erd"
-gem "redcarpet"
-gem "pry-rails"
-gem 'activeadmin'
-gem 'rubocop'
+gem "rails-erd", '~> 1.4.7'
+gem "redcarpet", '~> 3.3.4'
+gem "pry-rails", '~> 0.3.4'
+gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'rubocop', '~> 0.41.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

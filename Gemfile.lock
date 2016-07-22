@@ -247,7 +247,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeadmin
+  activeadmin (~> 1.0.0.pre2)
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
@@ -257,11 +257,11 @@ DEPENDENCIES
   jquery-turbolinks
   paperclip (~> 4.1)
   pg
-  pry-rails
+  pry-rails (~> 0.3.4)
   rails (= 4.2.6)
-  rails-erd
-  redcarpet
-  rubocop
+  rails-erd (~> 1.4.7)
+  redcarpet (~> 3.3.4)
+  rubocop (~> 0.41.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
