@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20160627120240) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.date     "birthday"
-    t.text     "introduction"
+    t.text     "personal_info"
     t.string   "user_email"
     t.string   "user_phone"
     t.datetime "created_at",          null: false
