@@ -4,8 +4,9 @@ def apply
   @course = Course.find learning_params[:course]		
   user = User.find learning_params[:user_id]
 
-  @learning = Learning.new(course: @course, user_id: user, status: :pending)
+  @learning = Learning.new(course: @course, user_id: user.id, status: :pending)
 
+  binding.pry
   @learning.save
   redirect_to @course
 end
