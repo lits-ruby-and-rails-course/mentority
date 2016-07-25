@@ -6,7 +6,6 @@ def apply
 
   @learning = Learning.new(course: @course, user_id: user.id, status: :pending)
 
-  binding.pry
   @learning.save
   redirect_to @course
 end
