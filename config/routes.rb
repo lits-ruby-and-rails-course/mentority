@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   ActiveAdmin.routes(self)
   devise_for :users, path: '/user', controllers: { registrations: "registrations" }
 
@@ -12,4 +11,5 @@ Rails.application.routes.draw do
   get 'pages/index' => 'pages#index'
   get 'profile' => 'profiles#show'
   get 'edit' => 'profiles#edit'
+  post 'learnings/apply' => 'learnings#apply'
 end
