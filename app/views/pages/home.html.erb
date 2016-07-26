@@ -1,0 +1,6 @@
+ <%if current_user.student?%>
+ <%= render partial: "layouts/dashboard/student"%>
+ <%end%>
+ <%if current_user.mentor?%>
+ <%= render partial: "layouts/dashboard/mentor"%>
+ <%end%>>
